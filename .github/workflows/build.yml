@@ -26,11 +26,11 @@ jobs:
         working-directory: cutespeak-aliucord
 
       - name: Build plugin with Gradle
-        run: ./gradlew CuteSpeak:make
+        run: ./gradlew make
         working-directory: cutespeak-aliucord
 
       - name: Upload CuteSpeak Artifact
         uses: actions/upload-artifact@v4
         with:
           name: CuteSpeak
-          path: cutespeak-aliucord/plugins/CuteSpeak/build/outputs/CuteSpeak.zip
+          path: cutespeak-aliucord/build/outputs/*.zip
